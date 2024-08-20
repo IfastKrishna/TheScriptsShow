@@ -1,0 +1,39 @@
+
+DOM: Document Object Model
+- It is a programming interface for HTML and XML documents
+- It represents the structure of a document as a tree of nodes
+- It defines methods and properties to access and manipulate the nodes of the tree
+
+#document (root)
+│
+├── html
+│   │
+│   ├── head
+│   │   └── title
+│   │       └── "My Webpage"
+│   │
+│   └── body
+│       │
+│       ├── h1
+│       │   └── "Welcome to My Webpage"
+│       │
+│       ├── p
+│       │   ├── "This is a paragraph with "
+│       │   └── a
+│       │       ├── href="#"
+│       │       └── "a link"
+│       │
+│       └── ul
+│           ├── li
+│           │   └── "Item 1"
+│           │
+│           └── li
+│               └── "Item 2"
+
+
+* using dom we can do 4 things
+1. Traverse the DOM tree (move up, down, and sideways in the DOM tree) 
+   and access the nodes
+2. Create elements
+3. Remove elements
+4. Modify elements

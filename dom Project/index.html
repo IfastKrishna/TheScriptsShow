@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background changer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      div {
+        background-color: lightsalmon;
+        margin: 0 100px;
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: auto;
+        position: absolute;
+        gap: 10px;
+        bottom: 0px;
+      }
+
+      div button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button>White</button>
+      <button>Red</button>
+      <button>Orange</button>
+      <button>Yellow</button>
+      <button>Green</button>
+      <button>Skyblue</button>
+      <button>Blue</button>
+      <button>Black</button>
+      <button>Grey</button>
+      <button>Lightgrey</button>
+      <button>brown</button>
+    </div>
+    <script>
+      const buttons = document.querySelectorAll("button");
+      buttons.forEach(function (btn) {
+        if (btn.textContent === "Black") {
+          btn.style.color = "white";
+          btn.style.backgroundColor = btn.textContent.toLowerCase();
+        } else {
+          btn.style.backgroundColor = btn.textContent.toLowerCase();
+          btn.style.color = "black";
+        }
+      });
+
+      function changeBackgroundColor(btn) {
+        const body = document.querySelector("body");
+        if (btn.textContent === "Black") {
+          body.style.color = "white";
+          body.style.backgroundColor = btn.textContent.toLowerCase();
+        } else {
+          body.style.backgroundColor = btn.textContent.toLowerCase();
+          body.style.color = "black";
+        }
+      }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          changeBackgroundColor(btn);
+        });
+      });
+
+      //    img  set src attribute in blub img
+      //  button click change the image src
+
+      // off = true;
+      // on = false;
+      //  if off = true; then on = false;
+    </script>
+  </body>
+</html>
